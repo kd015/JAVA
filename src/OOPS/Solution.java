@@ -1,16 +1,22 @@
 package OOPS;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class main {
+class Example {
+    public static int doSomething(int num) {
+        int n = num;
+        int total = 0;
+        for (int i = 1; i <= n; i++) {            
+            if (n % i == 0) {
+                total = total + i;
+            }
+        }
+        return total;
+    }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int i = scan.nextInt();
-        double d = scan.nextDouble();
-        short s = scan.nextShort();
-    
-        System.out.println("String: " + s);
-        System.out.println("Double: " + d);
-        System.out.println("Int: " + i);
+        int number = scan.nextInt();
+        int x = doSomething(number);
+        System.out.println(x);
     }
 }
